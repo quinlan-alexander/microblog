@@ -1,0 +1,31 @@
+2021-07-14 18:15:31,121 ERROR: Exception on / [GET] [in /Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/app/routes.py", line 37, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items,
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/venv/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/app/templates/base.html", line 54, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2021-07-14 18:19:31,086 INFO: Microblog startup [in /Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/app/__init__.py:52]
+2021-07-14 18:39:13,710 INFO: Microblog startup [in /Users/quinlanalexander/Documents/GradSchool/PersonalProjects/microblog/app/__init__.py:55]
